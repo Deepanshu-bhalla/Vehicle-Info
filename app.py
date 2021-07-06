@@ -12,7 +12,7 @@ print()
 f = cgi.FieldStorage()
 
 plate_no = f.getvalue("x")
-r = requests.get("http://www.regcheck.org.uk/api/reg.asmx/CheckIndia?RegistrationNumber={}&username=dbg".format(str(plate_no)))
+r = requests.get("http://www.regcheck.org.uk/api/reg.asmx/CheckIndia?RegistrationNumber={}&username=deepanshu06".format(str(plate_no)))
 
 data = xmltodict.parse(r.content)
 jdata = json.dumps(data)
